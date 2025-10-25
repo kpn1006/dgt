@@ -1,0 +1,147 @@
+.app{
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/bg001.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 70px auto 30px;
+}
+.app .header{
+    background: rgba(0,0,0,0.2);
+    color: white;
+    padding: 0 5px 0 5px;
+}
+.app .header .logo{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 24pt;
+    font-weight: bold;
+}
+.app .header .address{
+    font-size: 9pt;
+}
+.app .header .address span{
+    color: var(--greentext);
+}
+.app .header .logo span{
+    border: 2px solid white;
+    width: 30px;
+    height: 35px;
+    border-radius: 30px;
+    line-height: 33px;
+    padding-left: 5px;
+    margin: 0 5px 0 5px;
+}
+.app .footer{
+    line-height: 30px;
+    font-size: 8pt;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    padding: 0 5px 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.app section{
+    height: 100%;
+    overflow: auto;
+}
+.app section .content{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app section .content .leftPanel{
+    order: 1;
+    margin: 100px 0 0 50px;
+    color: white;
+}
+.app section .content .leftPanel h1{
+    font-size: 50pt;
+    padding: 0;
+    margin: 0;
+}
+.app section .content .leftPanel h1 span{
+    color: var(--greentext);
+}
+.app section .content .leftPanel p{
+    padding: 0;
+    font-size: 14pt;
+}
+.app section .content .rightPanel{
+    width: 410px;
+    height: 360px;
+    padding: 20px;
+    background: white;
+    order: 2;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+.app section .content .rightPanel .panel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.app section .content .rightPanel .panel .caption{
+    margin-top: 15px;
+}
+.app section .content .rightPanel .panel .fpassword{
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.app section .content .rightPanel .panel .fpassword span,.app section .content .rightPanel .panel .signup span{
+    margin-left: 5px;
+    color:var(--greendrk);
+    cursor: pointer;
+}
+.app section .content .rightPanel .panel .signup span:hover,
+.app section .content .rightPanel .panel .fpassword span:hover{
+    color: var(--greentext);
+}
+.app section .content .rightPanel .panel input{
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.app section .content .rightPanel .panel button{
+     margin-top: 20px;
+     height: 40px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     cursor: pointer;
+     background: var(--greendrk);
+     color: white;
+}
+.app section .content .rightPanel .panel button:hover{
+    background: var(--greendrkhv);
+}
+.app section .content .rightPanel .panel .signup{
+    margin-top: 30px;
+}
+@media(max-width: 768px){
+    .app{
+        background-size: cover;
+    }
+    .app section .content{
+        height: 800px;
+        flex-direction: column;
+    }
+    .app section .content .leftPanel{
+        margin: 10px;
+        order: 2;
+        /* display: none; */
+    }
+    .app section .content .rightPanel{
+        width: calc(100% - 60px);
+        height: 360px;
+        padding: 15px;
+        background: white;
+        order: 1;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
